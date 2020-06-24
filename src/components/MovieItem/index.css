@@ -1,0 +1,43 @@
+.movie-item {
+  height: 80px;
+  display: flex;
+  margin: 5px 0;
+  background: #fcfcfc;
+  border-radius: 3px;
+  padding: 10px;
+  color: #333;
+  font-size: 16px;
+}
+
+.movie-item a {
+  text-decoration: none;
+}
+
+.movie-item a:visited,
+.movie-item a:link {
+  color: #333;
+}
+
+.pic {
+  display: flex;
+}
+
+.pic em {
+  width: 30px;
+  text-align: center;
+  line-height: 80px;
+  padding-right: 5px;
+}
+
+.pic img {
+  width: 54px;
+}
+
+.info {
+  display: flex;
+  padding-left: 10px;
+}
+
+.info .title {
+  padding-right: 10px;
+}
