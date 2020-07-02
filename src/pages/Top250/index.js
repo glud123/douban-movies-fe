@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useCallback } from "react";
 import MovieItem from "./../../components/MovieItem";
 import Pager from "./../../components/Pager";
 const Top250 = () => {
@@ -13,9 +13,9 @@ const Top250 = () => {
         setMovies(resData.data);
       });
   }, [currentPage]);
-  const handlePageClick = (index) => {
+  const handlePageClick = useCallback((index) => {
     setCurrentPage(index);
-  };
+  },[]);
   return (
     <div>
       <div>

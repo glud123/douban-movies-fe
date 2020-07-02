@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-const Pager = (props) => {
+const Pager = React.memo((props) => {
   const { pages, currentPage, onPageClick } = props;
   const createPager = () => {
     let pager = [];
@@ -23,6 +23,6 @@ const Pager = (props) => {
     onPageClick(index);
   };
   return <ul className="pager">{createPager()}</ul>;
-};
+});
 
 export default Pager;

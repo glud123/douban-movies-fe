@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-const MovieItem = (props) => {
+const MovieItem = React.memo((props) => {
   const { img, title, link, star, num } = props.itemData;
   return (
     <div className="movie-item">
@@ -16,6 +16,6 @@ const MovieItem = (props) => {
       </div>
     </div>
   );
-};
+});
 
 export default MovieItem;
