@@ -8,10 +8,8 @@ const Pager = React.memo((props) => {
       pager.push(
         <li
           key={index}
-          className={`${
-            index + 1 === currentPage ? "current-page" : null
-          }`}
-          onClick={() => handlePagerClick(index + 1)}
+          className={`${index + 1 === currentPage ? "current-page" : null}`}
+          onClick={() => onPageClick(index + 1)}
         >
           {index + 1}
         </li>
@@ -19,10 +17,8 @@ const Pager = React.memo((props) => {
     }
     return pager;
   };
-  const handlePagerClick = (index) => {
-    onPageClick(index);
-  };
-  return <ul className="pager">{createPager()}</ul>;
+  const pagerList = createPager();
+  return <ul className="pager">{pagerList}</ul>;
 });
 
 export default Pager;
